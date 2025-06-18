@@ -36,7 +36,7 @@
 Our used cuda version is 12.1.1.
 Run
 ```bash
-conda create -n ovmono3d python=3.8.20
+conda create -n ovmono3d python=3.9
 conda activate ovmono3d
 
 pip install torch==2.4.1 torchvision==0.19.1 --index-url https://download.pytorch.org/whl/cu121
@@ -46,6 +46,7 @@ to create the environment and install pytorch.
 Run
 ```bash
 sh setup.sh
+pip install rerun-sdk==0.23.2
 ```
 to install additional dependencies and download model checkpoints of OVMono3D-LIFT and other foundation models.
 
@@ -58,7 +59,7 @@ python demo/demo.py --config-file configs/OVMono3D_dinov2_SFP.yaml \
 	--threshold 0.45 \
 	MODEL.ROI_HEADS.NAME ROIHeads3DGDINO \
 	MODEL.WEIGHTS checkpoints/ovmono3d_lift.pth \
-	OUTPUT_DIR output/coco_examples 
+	OUTPUT_DIR output/coco_examples
 ```
 to get the results for the example COCO images.
 
